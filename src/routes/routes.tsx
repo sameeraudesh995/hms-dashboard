@@ -8,6 +8,7 @@ import HospitalEssentials from "../pages/HospitalEssentials";
 import SpecialEvents from "../pages/SpecialEvents";
 import MedicalReports from "../pages/MedicalReports";
 import Settings from "../pages/Settings";
+import Dashboard from "../pages/Dashboard.tsx";
 
 export default function AppRoutes() {
     return (
@@ -16,6 +17,7 @@ export default function AppRoutes() {
                 {/* Main layout route */}
                 <Route path="/" element={<DashboardLayout />}>
                     {/* Child pages that will render inside <Outlet /> */}
+                    <Route path="dashboard" element={<Dashboard />} />
                     <Route path="appointments" element={<Appointments />} />
                     <Route path="patients" element={<Patients />} />
                     <Route path="prescriptions" element={<Prescriptions />} />
