@@ -1,24 +1,28 @@
-
-import ExploreButton from "./ExploreButton.tsx";
-
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import ExploreButton from "./ExploreButton";
 
 const handleExplore = () => {
-     // show world map
+    // handle explore action
 };
 
 const MapView = () => {
-
+ 
     return (
-        <div className=" relative flex w-auto  sm:w-full md:w-full lg:w-full xl:w-full  justify-between  rounded-[3px]  border-gray-200">
-            <div className='w-[100%]'>
-                <img
-                    src="/assets/srilanka-map.png"
-                    alt="Sri Lanka Map"
-                    className="w-[150px] h-auto p-2"
+        <div className="relative w-full h-[300px] border border-gray-200 rounded-[3px]">
+            <MapContainer center={[7.8731, 80.7718]} zoom={7} scrollWheelZoom={false} className="h-full w-full z-0">
+                <TileLayer
+
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-            </div>
-            <div className='absolute right-0 mt-[-3px] mr-1'>
-                <ExploreButton onExplore={handleExplore}/>
+                <Marker position={[7.8731, 80.7718]}>
+                    <Popup>Sri Lanka</Popup>
+                </Marker>
+            </MapContainer>
+
+            {/* Explore Button */}
+            <div className="absolute right-2 top-2 z-[1000]">
+                <ExploreButton onExplore={handleExplore} />
             </div>
         </div>
     );
