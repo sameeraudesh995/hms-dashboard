@@ -9,7 +9,7 @@ const handleExplore = () => {
 const MapView = () => {
 
     return (
-        <div className=" relative flex justify-between  rounded-[3px]  border-gray-200">
+        <div className=" relative flex w-auto  sm:w-full md:w-full lg:w-full xl:w-full  justify-between  rounded-[3px]  border-gray-200">
             <div className='w-[100%]'>
                 <img
                     src="/assets/srilanka-map.png"

@@ -48,8 +48,8 @@ const StatisticsPanel: React.FC = () => {
     return (
         <div className="bg-white rounded-[3px]  border-gray-200 p-1 w-full">
             <div className="flex justify-between items-center mt-[-2px] mb-0.5">
-                <h2 className="text-[7px] font-bold">Statistics</h2>
-                <button className="bg-blue-100 font-bold text-[5px] px-0.5 py-0.3 rounded-full">
+                <h2 className="text-[8px] font-bold">Statistics</h2>
+                <button className="bg-blue-100 font-bold text-[7px] px-0.5 py-0.3 rounded-full">
                     This week
                 </button>
             </div>
