@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Sidebar = () => {
     return (
         <div
-            className="top-0 left-0 flex flex-col items-center h-screen bg-gray-300 text-white w-[50px] py-4 overflow-hidden">
+            className="top-0 left-0 flex flex-col items-center h-screen bg-secondary/50 text-white w-[50px] py-4 overflow-hidden">
             {/* Logo */}
             <div className="flex items-center justify-center h-12 mb-3 mt-[-15px]">
                 <Link to="/dashboard"

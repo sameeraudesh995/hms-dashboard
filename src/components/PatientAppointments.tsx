@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../App.css';
 
-const dates = Array.from({ length: 15 }, () => ({
+const dates = Array.from({ length: 15 }, (_, i) => ({
     day: 'Wed',
-    date: 12,
+    date: 12 + i,
 }));
 
 const appointments = [
@@ -39,6 +39,126 @@ const appointments = [
         treatment: 'Skin Allergy',
         status: 'Cancelled',
     },
+    {
+        name: 'Emma Wilson',
+        date: '20-07-28',
+        time: '02:00 PM',
+        doctor: 'Dr. Emily Chen',
+        treatment: 'Eye Exam',
+        status: 'Confirmed',
+    },
+    {
+        name: 'Jackson Miller',
+        date: '20-07-28',
+        time: '03:00 PM',
+        doctor: 'Dr. Rajesh Kumar',
+        treatment: 'Physiotherapy',
+        status: 'Pending',
+    },
+    {
+        name: 'Sophia Davis',
+        date: '20-07-28',
+        time: '04:00 PM',
+        doctor: 'Dr. Hannah Lee',
+        treatment: 'Dermatology',
+        status: 'Confirmed',
+    },
+    {
+        name: 'Liam Johnson',
+        date: '20-07-28',
+        time: '04:30 PM',
+        doctor: 'Dr. James Brown',
+        treatment: 'ENT Check',
+        status: 'Cancelled',
+    },
+    {
+        name: 'Olivia Martin',
+        date: '20-07-28',
+        time: '05:00 PM',
+        doctor: 'Dr. Sara Lewis',
+        treatment: 'Neurology',
+        status: 'Confirmed',
+    },
+    {
+        name: 'Noah Anderson',
+        date: '20-07-28',
+        time: '05:30 PM',
+        doctor: 'Dr. Tom Hanks',
+        treatment: 'General Check-Up',
+        status: 'Pending',
+    },
+    {
+        name: 'Ava Thomas',
+        date: '20-07-28',
+        time: '06:00 PM',
+        doctor: 'Dr. Alicia Stone',
+        treatment: 'Dental Cleaning',
+        status: 'Confirmed',
+    },
+    {
+        name: 'William Moore',
+        date: '20-07-28',
+        time: '06:30 PM',
+        doctor: 'Dr. Kyle Green',
+        treatment: 'X-Ray Review',
+        status: 'Confirmed',
+    },
+    {
+        name: 'Mia Jackson',
+        date: '20-07-28',
+        time: '07:00 PM',
+        doctor: 'Dr. Nina Patel',
+        treatment: 'Follow-up Visit',
+        status: 'Pending',
+    },
+    {
+        name: 'James Martinez',
+        date: '20-07-28',
+        time: '07:30 PM',
+        doctor: 'Dr. Olivia Martinez',
+        treatment: 'Vaccination',
+        status: 'Confirmed',
+    },
+    {
+        name: 'Isabella White',
+        date: '20-07-28',
+        time: '08:00 PM',
+        doctor: 'Dr. Maria Rivera',
+        treatment: 'Consultation',
+        status: 'Confirmed',
+    },
+    {
+        name: 'Ethan Harris',
+        date: '20-07-28',
+        time: '08:30 PM',
+        doctor: 'Dr. Robert Cook',
+        treatment: 'Routine Blood Test',
+        status: 'Pending',
+    },
+    {
+        name: 'Charlotte Scott',
+        date: '20-07-28',
+        time: '09:00 PM',
+        doctor: 'Dr. Grace Kim',
+        treatment: 'ECG',
+        status: 'Cancelled',
+    },
+    {
+        name: 'Benjamin Adams',
+        date: '20-07-28',
+        time: '09:30 PM',
+        doctor: 'Dr. Harry Stewart',
+        treatment: 'Surgery Follow-Up',
+        status: 'Confirmed',
+    },
+    {
+        name: 'Amelia Clark',
+        date: '20-07-28',
+        time: '10:00 PM',
+        doctor: 'Dr. Angela Bennett',
+        treatment: 'Hearing Test',
+        status: 'Pending',
+    }
 ];
 
 const getStatusStyle = (status: string) => {
@@ -58,13 +178,12 @@ const PatientAppointments: React.FC = () => {
     const [selectedDateIndex, setSelectedDateIndex] = useState(6);
 
     return (
-        <div className="bg-white rounded-[3px]  border-gray-200 p-2 w-full">
+        <div className="bg-white rounded-[3px] border-gray-200 p-2 w-full">
             <h2 className="text-[7px] font-bold mb-1">Patient Appointments</h2>
 
             {/* Date Carousel */}
             <div className="flex items-center bg-blue-100 rounded-full overflow-x-auto no-scrollbar">
                 <button className="text-xs font-bold px-1">&lt;</button>
-
                 <div className="flex space-x-2 mx-1">
                     {dates.map((item, index) => (
                         <div
@@ -79,7 +198,6 @@ const PatientAppointments: React.FC = () => {
                         </div>
                     ))}
                 </div>
-
                 <button className="text-xs font-bold px-1">&gt;</button>
             </div>
 

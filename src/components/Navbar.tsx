@@ -10,6 +10,18 @@ const Navbar = () => {
 
                 {/* Right: Icons */}
                 <div className="flex items-center space-x-3">
+                    {/* Search Bar - Enhanced */}
+                    <div className="relative mt-1 w-full sm:w-[200px]">
+                        <input
+                            type="text"
+                            placeholder="Search here"
+                            className="pl-9 pr-3 border border-gray-200 py-1.5 rounded-full bg-white text-[10px] w-full focus:outline-none "
+                        />
+                        <span className="material-symbols-outlined absolute left-3 top-[7px] text-gray-400 text-[14px] pointer-edvents-none">
+                            search
+                        </span>
+                    </div>
+
                     <span className="material-symbols-outlined text-black-700 cursor-pointer text-[13px]">settings</span>
 
                     <div className="relative cursor-pointer">
@@ -22,18 +34,6 @@ const Navbar = () => {
                         <span className="absolute -top-1 -right-2 bg-primary text-white text-[7px] rounded-full px-1">13</span>
                     </div>
                 </div>
-            </div>
-
-            {/* Bottom Row: Search Bar */}
-            <div className="relative mt-2 w-full sm:w-[200px]">
-                <input
-                    type="text"
-                    placeholder="Search here"
-                    className="pl-8 pr-2 border-2 border-gray-300 py-1.5 rounded-full bg-white shadow-sm text-[9px] w-full focus:outline-none"
-                />
-                <span className="material-symbols-outlined absolute left-2 top-1 text-gray-500 text-base">
-          search
-        </span>
             </div>
         </div>
     );

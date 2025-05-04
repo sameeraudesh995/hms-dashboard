@@ -4,6 +4,10 @@ import PatientAppointments from "../components/PatientAppointments.tsx";
 import PatientDashboardCard from "../components/PatientDashboardCard.tsx";
 import Navbar from "../components/Navbar.tsx";
 import AppointmentsCard from "../components/AppointmentsCard.tsx";
+import PatientOverviewCard from "../components/PatientOverviewCard.tsx";
+import UpcomingSheduleCard from "../components/UpcomingSheduleCard.tsx";
+import UserProfileCard from "../components/UserProfileCard.tsx";
+import UpcomingCard from "../components/UpcomingCard.tsx";
 
 const Dashboard = () => {
     return (
@@ -39,11 +43,23 @@ const Dashboard = () => {
                         <div className="border border-gray-300 rounded-[3px]">
                             <AppointmentsCard />
                         </div>
+                        <div className="border border-gray-300 rounded-[3px]">
+                            <PatientOverviewCard />
+                        </div>
+                        <div className="border border-gray-300 rounded-[3px]">
+                            <UpcomingSheduleCard />
+                        </div>
                     </div>
 
                     {/* Right Section (40%) */}
-                    <div className="w-full md:w-[40%] border border-dashed border-gray-300 rounded-[3px] p-1 flex items-center justify-center text-[10px] text-gray-500">
-                        Right sub-section (coming soon...)
+                    <div className="w-full md:w-[40%] flex flex-col gap-2">
+                        <div className="border border-gray-300 rounded-[3px]">
+                            <UserProfileCard />
+                        </div>
+                        <div className="border border-gray-300 rounded-[3px]">
+                            <UpcomingCard />
+                        </div>
+                        {/* You can add more widgets/cards below if needed */}
                     </div>
                 </div>
             </div>
